@@ -1,20 +1,43 @@
-# 🛰️ Prokaryotic Population Kinetics: 24-Hour Europa Subglacial Ocean Simulation
+# Prokaryotic Population Kinetics: 24-Hour Europa Subglacial Ocean Simulation
 
-## 📊 Environmental Boundary Constraints
-* **Simulation Timeline:** 0 to 24 Hours (Subglacial Vertical Descent)
-* **Glacial Ice Protection:** 15 to 25 Kilometers (Absolute Electromagnetic and Radiation Shielding)
-* **Hydrostatic Pressure Range:** 1.0 bar (Ice-Ocean Boundary) scaling up to a crushing 1,200 bars (Benthic Seafloor)
-* **Ambient Thermal Load:** 0.0°C transitioning to a stable -2.0°C Saline Liquid Matrix
-* **Nutrient Availability:** Zero Glucose / Absolute darkness with active Iron (Fe) and Sulfur (S) Hydrothermal Vents
+## Environmental Boundary Conditions
 
-## ⚙️ Active Biophysical Mechanism Tracking
-* **Radiation Standby Mode:** The miles-thick Jovian subglacial ice shell completely blocks out all magnetospheric ionizing rays. The cell registers a radiation flux of zero, causing it to automatically disassemble its heavy Tier 2 polymer shield to save energy, safely resting in its Tier 1 baseline configuration.
-* **Piezophilic Membrane Stabilization:** As the vertical descent causes environmental pressure to pass the 20-bar limit and hit a maximum of 1,200 bars at the seafloor, the deep-sea piezophilic `pfa` cluster genes switch on. The cell wall automatically adjusts its fatty acid layers to insert molecular kinks, keeping the cell membrane fluid and flexible to prevent structural crushing or transport loop failure.
-* **Inorganic Energy Extraction:** Completely cut off from all solar illumination, the cell activates its subglacial Antarctic chemoautotrophic engine. The metabolic pathway directly processes dissolved minerals from the rocky seafloor hydrothermal vents, breaking down raw iron and sulfur compounds to synthesize a continuous supply of ATP chemical fuel independent of photosynthesis.
+This simulation models a hypothetical prokaryotic population descending through a subglacial ocean environment beneath Europa-like ice coverage.
 
-## 📉 Core Population Survival Metrics
-* **Hour 00 (Subglacial Ocean Boundary Entry):** 10,000,000 Active Cells
-* **Hour 06 (Thermal Readjustment Phase):** 9,965,300 Active Cells
-* **Hour 12 (Benthic Hydrothermal Crossover):** 9,942,100 Active Cells
-* **Hour 24 (Deep Seafloor Core Arrival):** 9,928,450 Active Cells
-* **Final Phase Evaluation:** Backed by the dual-layered combination of piezophilic cel
+- Simulation window: 0 to 24 hours
+- Ice shell thickness: 15 to 25 km
+- Radiation shielding: effectively complete due to the thickness of the ice shell
+- Hydrostatic pressure: 1 bar at the ice-ocean boundary to 1,200 bar at the seafloor
+- Thermal environment: 0.0°C to -2.0°C saline liquid matrix
+- Nutrient conditions: no glucose; darkness; inorganic chemical energy supplied by Fe and S hydrothermal vents
+
+## Active Biophysical Mechanisms
+
+### 1. Radiation Standby Mode
+The cell is shielded from magnetospheric ionizing radiation by the dense ice shell. The modeled radiation flux is effectively zero, allowing the organism to allocate metabolic effort away from radioprotection and toward maintenance, membrane stability, and survival under pressure and chemical limitation.
+
+### 2. Piezophilic Membrane Stabilization
+As the organism descends, pressure rises from the ice-ocean boundary toward the deep seafloor. Once conditions exceed the 20-bar threshold, membrane adaptations become active. The cell maintains membrane integrity and function through pressure-tolerant structural reconfiguration and stabilization.
+
+### 3. Inorganic Energy Extraction
+Without sunlight and with no accessible organic carbon, the organism activates a chemoautotrophic metabolic pathway. It extracts energy from mineral-rich hydrothermal chemistry, using inorganic redox gradients as the primary metabolic driver.
+
+## Population Survival Metrics
+
+| Time | Population | Notes |
+|---|---:|---|
+| Hour 00 | 10,000,000 | Entry into subglacial ocean boundary |
+| Hour 06 | 9,965,300 | Thermal adjustment and metabolic rebalancing |
+| Hour 12 | 9,942,100 | Hydrothermal crossover and pressure adaptation phase |
+| Hour 24 | 9,928,450 | Deep seafloor transit and continued survival |
+
+## Summary of Outcomes
+
+The modeled population remains viable across the 24-hour descent, with only a modest decline in active cell count. This outcome is attributed to the combined effect of:
+
+- piezophilic membrane stabilization
+- reduced radiation burden from the ice shell
+- inorganic energy acquisition from hydrothermal mineral chemistry
+- metabolic persistence under cold, dark, and high-pressure conditions
+
+The results suggest that a multi-layered stress-response strategy can support survival under extreme subglacial conditions even in the absence of direct solar energy or conventional organic nutrients.
