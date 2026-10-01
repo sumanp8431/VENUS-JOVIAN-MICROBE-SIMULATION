@@ -1,11 +1,11 @@
 # Venusian Atmospheric Survival Simulation
-
-## Environmental Conditions
-* **Altitude:** 70 km in the upper atmosphere
-* **Atmospheric Chemistry:** High concentration of sulfuric acid aerosols
-* **pH:** Approximately -0.5, indicating extreme acidity
-* **Water Availability:** Very low, with a desiccation index near 0.01
-* **Radiation Exposure:** Severe UV flux at 4,000 units
+##name: venus_upper_atmosphere
+* temperature_k: 300
+* pressure_bar: 1.0
+* ph_min: 0.0
+* radiation_dose: 2.0
+* water_availability: 0.02
+* energy_availability: 0.3
 
 ## Cell Response Strategy
 * **Radiation Stress Response:** The organism activates its high-level protective shell to polymerize surface monomers into a dense radiation-absorbing layer.
