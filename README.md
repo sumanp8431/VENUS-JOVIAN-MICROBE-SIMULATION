@@ -71,35 +71,7 @@ This repository is best understood as:
 
 A cleaner repository organization is recommended as follows:
 
-```text
-.
-├── README.md
-├── docs/
-│   ├── assumptions.md
-│   ├── limitations.md
-│   └── model_overview.md
-├── models/
-│   ├── organism_model.py
-│   └── defense_layers.py
-├── parameters/
-│   ├── default_parameters.yaml
-│   └── stress_profiles.yaml
-├── simulations/
-│   ├── run_simulation.py
-│   ├── config/
-│   └── results/
-├── analysis/
-│   ├── plots/
-│   └── summarize_results.py
-├── notebooks/
-│   └── exploratory_analysis.ipynb
-├── tests/
-│   ├── test_model_logic.py
-│   └── test_parameters.py
-├── requirements.txt
-├── LICENSE
-└── .gitignore
-```
+
 
 ## 🧪 Simulation Goals
 
