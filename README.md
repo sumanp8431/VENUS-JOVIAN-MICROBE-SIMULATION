@@ -1,7 +1,7 @@
-# 🧬 Synthetic Astrobiology Simulation Engine
+# Synthetic prokaryote with 5 level defence system based on researches ,assumed parameters and hyoponthetical simulations 
 
 ## 🌌 Project Overview
-This repository houses the computational research, mathematical parameters, and object-oriented Python architecture for an *in silico* multi-stressor simulation engine. The objective is to evaluate the survival boundaries of a fully synthetic prokaryotic organism across extreme solar and planetary environments.
+This is an early-stage conceptual and computational modeling project. The organism is hypothetical, and the parameter values are assumptions for exploring model behavior. The project does not claim that such an organism could be constructed or survive these environments in reality.
 
 ## 🧫 The 5-Tier Synthetic Genetic Blueprint
 Our engineered organism utilizes a highly coordinated synthetic genome combining five structural defense vectors:
