@@ -4,85 +4,110 @@ A conceptual and computational model of a hypothetical synthetic prokaryote desi
 
 ## 🌌 Project Overview
 
-This repository explores a hypothetical microbial system engineered with a multi-layer defense architecture intended for extreme environmental conditions. The design is inspired by known biological strategies, but the resulting organism is not a validated biological construct and should be treated as a research model, simulation framework, and conceptual exploration.
+This repository explores a hypothetical microbial system engineered with a multi-layer defense architecture intended for extreme environmental conditions. The design is inspired by known biological strategies, but the resulting organism is not a validated biological construct and should be treated as a conceptual model, simulation framework, and research sandbox.
 
-The goal is to study how layered protective systems might interact under conditions such as:
+The objective is to study how multiple protective systems may interact under conditions such as:
 - high acidity
 - ionizing radiation
 - dehydration and desiccation
 - pressure extremes
-- energy-limited or inorganic nutrient conditions
+- mineral-based or inorganic energy constraints
 
-This work is aimed at understanding emergent system behavior in a constrained simulation environment, not at proving real-world viability for extraterrestrial or human-colonization use cases.
+This project is intended to investigate emergent system behavior in a computational environment, not to claim real-world viability for deployment, extraterrestrial adaptation, or human-colonization scenarios.
 
 ## 🧫 Five-Tier Synthetic Genetic Blueprint
 
 The modeled organism integrates five coordinated defensive and metabolic modules:
 
 1. Acidic Stress Defense
-   - Acidophilic proton-pump scaling matrices
-   - pH regulation systems tuned for highly acidic environments
+   - acidophilic proton-pump scaling matrices
+   - pH regulation systems tuned for highly acidic conditions
 
 2. Dual-Layer Radiation Defense
-   - Baseline DNA repair loops inspired by Dsup-like protection mechanisms
-   - Autonomous radiation-triggered supramolecular polymerization switch for rapid structural reinforcement
+   - baseline DNA repair loops inspired by Dsup-like protection mechanisms
+   - radiation-triggered supramolecular polymerization for rapid structural reinforcement
 
 3. Dehydration Protection
-   - Tardigrade-inspired vitrification and stabilization matrices
-   - Structural "Tun" state preservation via protective molecular organization
+   - tardigrade-inspired vitrification and stabilization matrices
+   - structural "Tun" state preservation through protective molecular organization
 
 4. Pressure Adaptation
-   - Deep-sea piezophilic fatty acid optimization using pfa cluster analogs
-   - Increased membrane fluidity and stress tolerance under high pressure
+   - deep-sea piezophilic fatty acid optimization using pfa-like analogs
+   - membrane fluidity enhancement under high-pressure conditions
 
 5. Inorganic Energy Engine
-   - Chemolithotrophic, chemoautotrophic energy modules modeled after subglacial Antarctic analog ecosystems such as Blood Falls-like environments
-   - Energy harvesting from mineral or inorganic chemical gradients
+   - chemolithotrophic, chemoautotrophic energy modules modeled after subglacial Antarctic analog ecosystems
+   - energy harvesting from mineral or inorganic chemical gradients
 
 ## 🧠 Scientific Framing
 
-This project is built around the idea that survival under harsh conditions may depend on layered defense rather than single-mechanism adaptation. In the model, each system is not independent; instead, defense mechanisms interact to produce emergent resilience.
+This project is built around the idea that survival in harsh environments may depend on layered defense rather than a single adaptation strategy. In the model, each subsystem contributes to a broader network of resilience, with trade-offs among energy use, stability, and stress response.
 
-The framework is designed to investigate:
-- trade-offs between energy cost and protection
-- interactions among stress-response systems
-- signal-triggered behavior under compound environmental stress
-- system stability in low-resource, high-extreme environments
+The project is designed to explore:
+- interaction between defense mechanisms
+- cost-benefit trade-offs under compound stress
+- adaptive behavior under changing environmental conditions
+- resilience patterns in resource-limited systems
 
 ## ⚠️ Scope and Limitations
 
 This is a conceptual simulation project.
 
 Key limitations:
-- Parameter values are assumed rather than empirically measured
-- Biological analogies are used as design inspiration, not direct proof of function
-- The organism is hypothetical and not intended as a real engineered organism proposal
-- The simulation is exploratory and should be interpreted within a model-building context
+- parameter values are assumed rather than empirically measured
+- biological analogies are used as inspiration, not direct proof of function
+- the organism is hypothetical and not intended as a real engineered organism proposal
+- the simulation is exploratory and should be interpreted within a modeling context
 
 ## 🎯 Intended Use
 
 This repository is best understood as:
 - a speculative simulation framework
-- a conceptual synthetic biology model
+- a conceptual synthetic biology-inspired model
 - a research sandbox for layered stress-response systems
 - an educational and exploratory computational prototype
 
 ## 📁 Repository Structure
 
-The repository may include or evolve to contain:
-- simulation models and parameter files
-- genetic/structural blueprint definitions
-- environmental stress condition scripts
-- analysis and visualization outputs
-- documentation for assumptions and interpretation
+A cleaner repository organization is recommended as follows:
+
+```text
+.
+├── README.md
+├── docs/
+│   ├── assumptions.md
+│   ├── limitations.md
+│   └── model_overview.md
+├── models/
+│   ├── organism_model.py
+│   └── defense_layers.py
+├── parameters/
+│   ├── default_parameters.yaml
+│   └── stress_profiles.yaml
+├── simulations/
+│   ├── run_simulation.py
+│   ├── config/
+│   └── results/
+├── analysis/
+│   ├── plots/
+│   └── summarize_results.py
+├── notebooks/
+│   └── exploratory_analysis.ipynb
+├── tests/
+│   ├── test_model_logic.py
+│   └── test_parameters.py
+├── requirements.txt
+├── LICENSE
+└── .gitignore
+```
 
 ## 🧪 Simulation Goals
 
 The model aims to investigate:
-- how defense layers respond under environmental stress
+- how multiple defense layers respond under environmental stress
 - whether combined protective strategies increase survival probability
-- how metabolic constraints influence resistance performance
-- how hypothetical adaptation systems behave under dynamic conditions
+- how energetic constraints influence resilience
+- how hypothetical adaptive systems behave under dynamic conditions
 
 ## 📌 Summary
 
