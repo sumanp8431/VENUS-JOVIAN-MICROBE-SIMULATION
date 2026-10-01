@@ -67,11 +67,6 @@ This repository is best understood as:
 - a research sandbox for layered stress-response systems
 - an educational and exploratory computational prototype
 
-## 📁 Repository Structure
-
-A cleaner repository organization is recommended as follows:
-
-
 
 ## 🧪 Simulation Goals
 
