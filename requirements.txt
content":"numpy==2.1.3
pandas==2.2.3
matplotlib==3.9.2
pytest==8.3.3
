@@ -1,0 +1,48 @@
+# Scope and Limitations
+
+This repository is a conceptual and computational model of a hypothetical synthetic prokaryote. It is included to explore layered stress-response logic under combined planetary analog conditions.
+
+## What the model is
+
+- a toy simulation of multi-stressor resilience
+- a systems-oriented conceptual framework
+- a reproducible computational experiment for comparing module effects
+- a educational tool for reasoning about interactions among stress defenses
+
+## What the model is not
+
+- not a validated organism design
+- not an experimentally measured biological model
+- not a claim that such a synthetic organism could realistically survive in the described environments
+- not a source of deployment-ready engineering guidance
+
+## Parameter assumptions
+
+All variable values used in the simulation are assumed for model structure and should not be interpreted as experimentally measured values. They are intended to demonstrate how layered stress responses might change survival outcomes under severe conditions.
+
+## Biological interpretation
+
+The project draws inspiration from extremophiles and stress-tolerance mechanisms in nature. These inspirations are used as conceptual analogies, not as direct biochemical evidence that the modeled organism would function in reality.
+
+## Recommended reading
+
+Readers should interpret the outputs as:
+
+- illustrative
+- approximate
+- comparative
+- exploratory
+
+The value of the repository lies in the logic of layered resilience and trade-off analysis, not in a claim of biological realism.
+
+## Future improvements
+
+To increase scientific rigor, future work could include:
+
+- measured parameter ranges from literature
+- sensitivity analysis
+- a larger set of environmental scenarios
+- comparison against baseline no-defense conditions
+- validation against qualitative biological expectations
+
+This project should be viewed as a transparent modeling exercise rather than a finished scientific claim.

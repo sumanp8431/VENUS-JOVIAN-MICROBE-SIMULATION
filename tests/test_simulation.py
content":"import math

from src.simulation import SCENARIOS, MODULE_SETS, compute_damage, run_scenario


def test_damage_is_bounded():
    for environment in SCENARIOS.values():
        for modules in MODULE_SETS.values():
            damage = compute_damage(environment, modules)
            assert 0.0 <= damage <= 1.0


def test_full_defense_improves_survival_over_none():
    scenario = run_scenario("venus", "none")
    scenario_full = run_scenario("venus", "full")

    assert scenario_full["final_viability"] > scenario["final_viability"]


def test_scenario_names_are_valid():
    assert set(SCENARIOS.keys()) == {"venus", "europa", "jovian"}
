@@ -1,0 +1,187 @@
+import argparse
+import csv
+import os
+from dataclasses import dataclass, asdict
+from typing import Dict, List
+
+import numpy as np
+import pandas as pd
+
+
+@dataclass
+class Environment:
+    name: str
+    ph_stress: float
+    radiation: float
+    dehydration: float
+    pressure: float
+    heat: float
+    energy_limitation: float
+    water_availability: float
+
+
+@dataclass
+class ModuleSet:
+    acid_defense: float
+    radiation_defense: float
+    dehydration_protection: float
+    pressure_adaptation: float
+    energy_engine: float
+
+
+SCENARIOS: Dict[str, Environment] = {
+    "venus": Environment(
+        name="venus",
+        ph_stress=0.85,
+        radiation=0.72,
+        dehydration=0.68,
+        pressure=0.30,
+        heat=0.60,
+        energy_limitation=0.52,
+        water_availability=0.18,
+    ),
+    "europa": Environment(
+        name="europa",
+        ph_stress=0.35,
+        radiation=0.45,
+        dehydration=0.86,
+        pressure=0.76,
+        heat=0.22,
+        energy_limitation=0.90,
+        water_availability=0.10,
+    ),
+    "jovian": Environment(
+        name="jovian",
+        ph_stress=0.45,
+        radiation=0.95,
+        dehydration=0.60,
+        pressure=0.88,
+        heat=0.80,
+        energy_limitation=0.70,
+        water_availability=0.12,
+    ),
+}
+
+MODULE_SETS: Dict[str, ModuleSet] = {
+    "none": ModuleSet(0.0, 0.0, 0.0, 0.0, 0.0),
+    "partial": ModuleSet(0.35, 0.40, 0.40, 0.35, 0.30),
+    "full": ModuleSet(0.80, 0.85, 0.82, 0.78, 0.75),
+}
+
+
+def clamp(value: float, minimum: float = 0.0, maximum: float = 1.0) -> float:
+    return max(minimum, min(value, maximum))
+
+
+def compute_damage(env: Environment, modules: ModuleSet) -> float:
+    acid_damage = env.ph_stress * (1.0 - modules.acid_defense)
+    radiation_damage = env.radiation * (1.0 - modules.radiation_defense)
+    dehydration_damage = env.dehydration * (1.0 - modules.dehydration_protection)
+    pressure_damage = env.pressure * (1.0 - modules.pressure_adaptation)
+    energy_damage = env.energy_limitation * (1.0 - modules.energy_engine)
+
+    total_damage = (
+        0.32 * acid_damage +
+        0.28 * radiation_damage +
+        0.18 * dehydration_damage +
+        0.14 * pressure_damage +
+        0.08 * energy_damage
+    )
+    return clamp(total_damage, 0.0, 1.0)
+
+
+def recover_bonus(modules: ModuleSet) -> float:
+    return (
+        0.08 * modules.acid_defense +
+        0.08 * modules.radiation_defense +
+        0.06 * modules.dehydration_protection +
+        0.05 * modules.pressure_adaptation +
+        0.08 * modules.energy_engine
+    )
+
+
+def simulate(environment: Environment, modules: ModuleSet, steps: int = 60) -> List[Dict[str, float]]:
+    viability = 0.90
+    time_series = []
+
+    for step in range(1, steps + 1):
+        damage = compute_damage(environment, modules)
+        bonus = recover_bonus(modules)
+
+        # Additional energy penalty when water is low
+        water_penalty = (1.0 - environment.water_availability) * 0.08
+        thermal_penalty = environment.heat * 0.06
+
+        viability = viability - (damage + water_penalty + thermal_penalty) * 0.10
+        viability = viability + bonus * 0.04
+        viability = clamp(viability, 0.0, 1.0)
+
+        time_series.append(
+            {
+                "time_step": step,
+                "viability": round(viability, 4),
+                "damage": round(damage, 4),
+                "bonus": round(bonus, 4),
+            }
+        )
+
+    return time_series
+
+
+def summarize(environment: Environment, modules: ModuleSet, steps: int = 60) -> Dict[str, float]:
+    series = simulate(environment, modules, steps)
+    viability_values = [point["viability"] for point in series]
+    damage_values = [point["damage"] for point in series]
+
+    mean_viability = float(np.mean(viability_values))
+    final_viability = float(viability_values[-1])
+    mean_damage = float(np.mean(damage_values))
+
+    failure_step = next((point["time_step"] for point in series if point["viability"] <= 0.15), None)
+    if failure_step is None:
+        failure_step = steps
+
+    return {
+        "scenario": environment.name,
+        "module_set": "custom",
+        "mean_viability": round(mean_viability, 4),
+        "final_viability": round(final_viability, 4),
+        "mean_damage": round(mean_damage, 4),
+        "days_to_failure": failure_step,
+    }
+
+
+def run_scenario(scenario_name: str, module_set_name: str, steps: int = 60) -> Dict[str, float]:
+    environment = SCENARIOS[scenario_name]
+    modules = MODULE_SETS[module_set_name]
+    results = summarize(environment, modules, steps)
+    results["module_set"] = module_set_name
+    return results
+
+
+def write_summary_csv(path: str, rows: List[Dict[str, float]]) -> None:
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w", newline="") as csvfile:
+        writer = csv.DictWriter(
+            csvfile,
+            fieldnames=["scenario", "module_set", "mean_viability", "final_viability", "mean_damage", "days_to_failure"],
+        )
+        writer.writeheader()
+        writer.writerows(rows)
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(description="Run a toy simulation of a synthetic prokaryote under planetary analog stress.")
+    parser.add_argument("--scenario", choices=["venus", "europa", "jovian"], default="venus")
+    parser.add_argument("--module-set", choices=["none", "partial", "full"], default="full")
+    parser.add_argument("--steps", type=int, default=60)
+    parser.add_argument("--output", default="results/example_summary.csv")
+    args = parser.parse_args()
+
+    result = run_scenario(args.scenario, args.module_set, args.steps)
+    print(result)
+    write_summary_csv(args.output, [result])
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,90 @@
+# VENUS-JOVIAN-MICROBE-SIMULATION
+
+A reproducible, computational toy model for a hypothetical synthetic prokaryote designed to explore how layered stress-response systems might behave under multi-stressor planetary analog conditions.
+
+This repository is intentionally framed as a conceptual systems model rather than a claim of real biological feasibility. The goal is to create a transparent, testable simulation framework that shows how different defensive modules interact under combined environmental pressure.
+
+## Project intent
+
+This project tests a simple question:
+
+- Do layered protective systems improve simulated persistence under combined stress conditions more than isolated defenses alone?
+
+The model is built around five stress-response modules:
+
+1. Acid stress defense
+2. Radiation defense
+3. Dehydration protection
+4. Pressure adaptation
+5. Inorganic energy harvesting
+
+## Scientific framing
+
+The design is deliberately conservative:
+
+- parameters are explicit and documented
+- equations are stated in plain language and code
+- outputs are reproducible
+- assumptions are separated from interpreted conclusions
+- this is a model for reasoning, not a validated organism blueprint
+
+## Repository structure
+
+```text
+.
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── docs/
+│   ├── methodology.md
+│   └── limitations.md
+├── src/
+│   └── simulation.py
+├── tests/
+│   └── test_simulation.py
+├── results/
+│   └── example_summary.csv
+└── scripts/
+    └── run_experiments.sh
+```
+
+## Quick start
+
+1. Create a virtual environment.
+2. Install dependencies.
+3. Run the example scenario.
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python src/simulation.py --scenario venus --module-set full --steps 60
+```
+
+## Example outputs
+
+The script prints a summary table and writes CSV output to `results/example_summary.csv`.
+
+Example summary:
+
+```text
+scenario,module_set,mean_viability,final_viability,mean_damage,days_to_failure
+venus,full,0.69,0.74,0.29,58
+venus,none,0.22,0.08,0.77,14
+```
+
+## Why this version is stronger
+
+This version improves the repository by making it:
+
+- reproducible
+- quantitative
+- transparent about assumptions
+- testable with Python unit tests
+- easier to compare across scenarios
+
+## Limitations
+
+This remains a toy model. It is not intended to represent a real organism or to make biological claims. It is designed to explore how layered stress-response architectures could alter resilience under combined environmental stress.
+
+See `docs/methodology.md` and `docs/limitations.md` for the full assumptions and interpretation guidance.
