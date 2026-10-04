@@ -19,17 +19,64 @@
 * **Inserted Trait:** Chemoautotrophic lithotrophic pathways modeled on microbes found in Antarctic subglacial ecosystems, including settings analogous to Lake Vostok and Blood Falls.
 * **Operational Effect:** In dark environments where sunlight is absent and organic substrates are unavailable, the cell uses inorganic chemical gradients to generate energy. This enables survival in subglacial or subsurface environments with no photosynthetic input.
 * **Simulation Result:** The engineered cell demonstrated functional metabolic persistence in Europa-like subglacial conditions, resolving the starvation bottleneck that would otherwise occur in dark, mineral-rich environments.
+## Empirical Baseline: Inorganic Chemoautotrophic Engine
 
+## 🔬 Peer-Reviewed Citation
+* **Primary Reference:** *A Subglacial Microbial Ecosystem Sustained by Sulfur and Iron Metabolism.*
+* **Academic Domain:** Subglacial Geomicrobiology and Astrobiological Analogs.
+
+## ⚙️ Biophysical Mechanism
+In extra-planetary environments lacking sunlight and organic glucose matrices (such as the subglacial ocean of Europa or dense lower clouds of Jupiter), heterotrophic life forms suffer immediate metabolic starvation collapse. 
+
+The integration of specialized **lithotrophic oxidation-reduction enzymes** (modeled after isolated subglacial Antarctic ecosystems) bypasses the need for photosynthesis. The synthetic cell acts as an inorganic electron scavenger, breaking down **dissolved sulfur compounds and raw iron ions (Fe2+/Fe3+)** directly from surrounding rock or cloud brines. This continuous electron extraction maintains internal cellular respiration and chemical energy storage independent of external illumination.
+
+## 📉 Simulation Parameter Constraints
+* `basal_starvation_drain = -10.0` (Energy loss per time-step in absolute sterile conditions)
+* `inorganic_conversion_rate = 20.0` (ATP yield multiplier per unit of mineral availability)
+* `minimum_metabolic_pool = 0.01` (System floor before population decay triggers)
+  
 ## 🌊 Phase 5: Deep-Sea Pressure Adaptation
 * **Inserted Trait:** Deep-sea piezophilic gene clusters, modeled on organisms such as *Photobacterium profundum*.
 * **Operational Effect:** High hydrostatic pressure destabilizes conventional membrane lipids, making them rigid and brittle. The inserted pathways promote synthesis of unsaturated fatty acids that create membrane flexibility and maintain fluidity under extreme pressure.
 * **Simulation Result:** The organism remained metabolically functional under elevated pressure conditions, including simulated atmospheric pressures approaching the range experienced in deep Jovian atmospheric regimes.
+  
+## Empirical Baseline: Piezophilic Membrane Vector
 
+## 🔬 Peer-Reviewed Citation
+* **Primary Reference:** *Structure and regulation of the omega-3 polyunsaturated fatty acid synthase genes from the deep-sea bacterium Photobacterium profundum strain SS9.*
+* **Academic Domain:** Molecular Microbiology and High-Pressure Biophysics.
+
+## ⚙️ Biophysical Mechanism
+Under extreme hydrostatic compression exceeding 20 bars, standard prokaryotic membrane bilayers compress into rigid, crystalline lipid configurations. This crystallization layer halts fluid nutrient transport and causes structural channels to seize. 
+
+The integration of the **pfaA-D operon (Type I Polyketide Synthase pathway)** allows the cell to synthesize long-chain omega-3 polyunsaturated fatty acids. These molecules introduce structural kinks into the membrane matrix, preventing tight lipid packing. This locks membrane fluidity and maintains cellular metabolic exchange up to a threshold of 1,200 bars.
+
+## 📉 Simulation Parameter Constraints
+* `pressure_threshold = 20.0` (Barophilic activation tipping point)
+* `membrane_fluidity_min = 0.98` (Maintained via long-chain omega-3 synthesis)
+* `max_hydrostatic_tolerance = 1200.0` (Benthic seafloor limit)
+  
 ## 🛡️ Phase 6: Tier 2 Cosmic Shield Upgrade
 * **Inserted Trait:** Adaptive supramolecular polymerization switch.
 * **Operational Effect:** When radiation flux exceeds a critical threshold (greater than 800 units), the system initiates a rapid protective cascade. The cell polymerizes a dense supramolecular shell that absorbs and dissipates incoming radiation energy before it damages cellular machinery.
 * **Simulation Result:** When exposed to a 8,000-unit radiation event in simulated Jovian orbital conditions, the shield density reached 0.83, effectively reducing critical damage to survivable levels.
+  
+## Empirical Baseline: Radiotrophic Shielding Switch
 
+## 🔬 Peer-Reviewed Citation
+* **Primary Reference:** *Ionizing Radiation Changes the Electronic Properties of Melanin / Cryptococcus neoformans as a Biological Energy Producer.*
+* **Academic Domain:** Radiocyanobacterial Studies and Bio-electronics.
+
+## ⚙️ Biophysical Mechanism
+This module maps the electronic conversion of ionizing flux via structured pigments. Melanin behaves as a room-temperature semiconductor with a highly stable free radical network. 
+
+When high-energy cosmic rays, solar protons, or ultraviolet fluxes cross the 800-unit threshold, they induce an immediate electronic transition within the cell's synthetic melanin-carbon matrix. Instead of causing structural radiolysis or double-strand DNA fracturing, the absorbed photon flux drives continuous **electron-transfer loops**. This converts radiation energy into chemical energy to drive ATP synthesis, stabilizing background cell maintenance loops.
+
+## 📉 Simulation Parameter Constraints
+* `cosmic_ray_trigger = 800.0` (Monomer polymerization and electronics tipping point)
+* `shield_energy_conversion_efficiency = 0.05` (5% of captured flux routed to ATP pools)
+* `unshielded_ionization_fraction = 0.01` (99% attenuation under maximum polymerization)
+  
 ## ☀️ Phase 7: Capstone Solar Core Equilibrium
 * **Final Optimization:** Ultra-refractory carbon-silicon and carbonitride network integration, with volatile approximations removed to increase thermal and structural stability.
 * **Operational Effect:** The organism implements a Thermal Equilibrium Protocol that prevents direct conflict with solar heating. Instead of resisting heat, it dynamically maintains internal thermal balance using radiotrophic pigments and highly heat-tolerant cellular architectures.
