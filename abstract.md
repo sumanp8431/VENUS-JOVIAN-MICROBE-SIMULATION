@@ -1,3 +1,3 @@
 # Abstract Draft Reverted
 
-This abstract draft has been reverted to the original concept-focused repository framing.
+This file is part of the earlier thesis rewrite and has been reverted to the original speculative concept style.
