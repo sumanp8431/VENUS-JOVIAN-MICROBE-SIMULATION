@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-set -euo pipefail
-
-python src/simulation.py --scenario venus --module-set none --output results/venus_none.csv
-python src/simulation.py --scenario venus --module-set partial --output results/venus_partial.csv
-python src/simulation.py --scenario venus --module-set full --output results/venus_full.csv
-
-python src/simulation.py --scenario europa --module-set full --output results/europa_full.csv
-python src/simulation.py --scenario jovian --module-set full --output results/jovian_full.csv
