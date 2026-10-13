@@ -1,5 +1,5 @@
 # Venusian Atmospheric Survival Simulation
-##name: venus_upper_atmosphere
+## Name: venus_upper_atmosphere
 * temperature_k: 300
 * pressure_bar: 1.0
 * ph_min: 0.0
